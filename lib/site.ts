@@ -16,7 +16,7 @@ export const site = {
   email: "sales@gulffixit.com",
   whatsapp: "971545999795",
   address: {
-    streetAddress: "Al ASMAWI Office Building, 1st Floor #17 Ras Al Khor Industrial Area 2, Dubai, UAE",
+    streetAddress: "Al Asmawi Office Building, 1st Floor #17 Ras Al Khor Industrial Area 2, Dubai, UAE",
     addressLocality: "Dubai",
     addressRegion: "Dubai",
     addressCountry: "AE",
@@ -54,7 +54,7 @@ export type ServiceItem = {
 export const services: ServiceItem[] = [
   {
     slug: "fit-outs",
-    name: "Interior Fit-Outs",
+    name: "Fit-Outs",
     shortName: "Fit-Outs",
     metaTitle: "Interior Fit-Out Company in Dubai",
     metaDescription:
@@ -88,7 +88,7 @@ export const services: ServiceItem[] = [
   },
   {
     slug: "air-conditioning",
-    name: "Air Conditioning Services",
+    name: "Air Conditioning",
     shortName: "Air Conditioning",
     metaTitle: "AC Repair & Maintenance Dubai",
     metaDescription:
@@ -121,7 +121,7 @@ export const services: ServiceItem[] = [
   },
   {
     slug: "electrical-works",
-    name: "Electrical Works",
+    name: "Electrical",
     shortName: "Electrical",
     metaTitle: "Electrician & Electrical Maintenance Dubai",
     metaDescription:
@@ -154,7 +154,7 @@ export const services: ServiceItem[] = [
   },
   {
     slug: "plumbing-works",
-    name: "Plumbing Works",
+    name: "Plumbing",
     shortName: "Plumbing",
     metaTitle: "Plumber & Plumbing Maintenance Dubai",
     metaDescription:
@@ -286,7 +286,7 @@ export const services: ServiceItem[] = [
   },
   {
     slug: "handyman-services",
-    name: "Handyman Services",
+    name: "Handyman",
     shortName: "Handyman",
     metaTitle: "Handyman Services Dubai",
     metaDescription:

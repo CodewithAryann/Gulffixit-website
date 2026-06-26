@@ -106,7 +106,7 @@ export default function AboutPage() {
             <div>
               <SectionHeading eyebrow="Who We Are" title="Built by technicians, run like a contractor" />
               <p className="mt-6 text-ink-soft text-[15.5px] leading-relaxed">
-                Gulf Fixit exists to solve one problem: too many numbers in
+                Gulf Fixit exists to solve one problem, too many numbers in
                 the phone, and no single point of accountability when
                 something needs fixing, building or maintaining. Landlords,
                 facility managers and homeowners across Dubai were tired of

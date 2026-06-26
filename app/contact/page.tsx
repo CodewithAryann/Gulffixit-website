@@ -75,11 +75,9 @@ export default function ContactPage() {
                 <MapPin className="w-5 h-5 text-red-deep" />
               </div>
               <div>
-                <p className="font-semibold text-ink text-[15px] mb-1">Service area</p>
+                <p className="font-semibold text-ink text-[15px] mb-1">Office</p>
                 <p className="text-ink-soft text-[14.5px]">
-                  {site.address.streetAddress}, {site.address.addressLocality}, UAE
-                  <br />
-                  Serving all of Dubai &amp; surrounding Emirates
+                  {site.address.streetAddress}
                 </p>
               </div>
             </div>

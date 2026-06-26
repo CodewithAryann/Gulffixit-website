@@ -61,8 +61,8 @@ export default function About() {
               directly with Dubai property owners and facility managers.
               We&apos;ve since grown into a full fit-out and renovation
               contractor — but the way we work hasn&apos;t changed: turn up on
-              time, quote honestly, and finish the job properly the first
-              time.
+              time, transparent, and finish the job properly at first
+              attempt.
             </p>
 
             <div className="mt-10 grid sm:grid-cols-2 gap-6">
