@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  /* ---- Brand palette (matched to the Gulf Fixit logo) ---- */
+  /* Deep charcoal-black — primary dark surface */
+  --color-charcoal: #121316;
+  --color-charcoal-soft: #1b1d21;
+  /* Pure white / warm paper for light surfaces */
+  --color-paper: #ffffff;
+  --color-paper-dim: #f4f4f5;
+  /* Signature red — straight from the logo gradient, not a generic CTA red */
+  --color-red: #d4202c;
+  --color-red-deep: #a8131c;
+  --color-red-light: #ef4452;
+  /* Dark slate-gray — secondary accent, echoes the gear ring in the logo */
+  --color-slate: #3a3d42;
+  --color-slate-light: #6b6f76;
+  /* Functional grays */
+  --color-ink: #15171a;
+  --color-ink-soft: #53585f;
+  --color-line: rgba(255, 255, 255, 0.12);
+  --color-line-dark: rgba(18, 19, 22, 0.1);
+
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
+}
+
+@theme inline {
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-soft: var(--color-charcoal-soft);
+  --color-paper: var(--color-paper);
+  --color-paper-dim: var(--color-paper-dim);
+  --color-red: var(--color-red);
+  --color-red-deep: var(--color-red-deep);
+  --color-red-light: var(--color-red-light);
+  --color-slate: var(--color-slate);
+  --color-slate-light: var(--color-slate-light);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --font-display: var(--font-oswald);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* ---- Blueprint grid motif: a recurring signature texture ---- */
+.blueprint-grid {
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.blueprint-grid-dark {
+  background-image:
+    linear-gradient(var(--color-line-dark) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line-dark) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.crosshair::before,
+.crosshair::after {
+  content: "";
+  position: absolute;
+  background: var(--color-red);
+}
+
+/* ---- Motion ---- */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slideDown {
+  animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeUp {
+  animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar accent for a technical feel */
+::selection {
+  background: var(--color-red);
+  color: var(--color-paper);
+}
